@@ -14,6 +14,23 @@ const Hello = (props) => {
 const App = () => {
   const name = "Lucas";
   const age = 29;
+  //Arrays
+  const t = [1, -2, 3];
+  t.push(5);
+  console.log(t.length);
+  console.log(t[1]);
+  t.forEach((value) => {
+    console.log(value);
+  });
+
+  //Rest
+
+  const v = [1, 2, 3, 4, 5];
+
+  const [first, second, ...rest] = v;
+
+  console.log(first, second); // 1, 2 es impreso
+  console.log(rest); // [3, 4 ,5] es impreso
 
   return (
     <div>
