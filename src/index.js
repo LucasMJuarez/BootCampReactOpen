@@ -1,16 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const App = () => {
-  const now = new Date();
-  const a = 10;
-  const b = 20;
+const Hello = (
+  {name, age}
+) => {
+  //destructuring
+
+  const bornYear = () => new Date().getFullYear() - age;
+  //calcula el ano de nacimiento
   return (
     <div>
-      <p>Hello world it is {now.toString()}</p>
       <p>
-        {a} plus {b} is {a + b}
+        Hello {name}, you are {age} years old
       </p>
+      <p>So you were probably born in {bornYear()}</p>
+    </div>
+  );
+};
+
+const App = () => {
+  const name = "Peter";
+  const age = 10;
+
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello name="Maya" age={26 + 7} />
+      <Hello name={name} age={age} />
     </div>
   );
 };
