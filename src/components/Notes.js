@@ -1,8 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-
-const notes = [
+export const notes = [
   {
     id: 1,
     content: "HTML is easy",
@@ -22,5 +18,3 @@ const notes = [
     important: true,
   },
 ];
-
-ReactDOM.render(<App notes={notes} />, document.getElementById("root"));
